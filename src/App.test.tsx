@@ -5,5 +5,5 @@ import App from './App';
 
 test('renders app', () => {
   render(<App />);
-  expect(screen.getByText('Testing')).toBeInTheDocument();
+  expect(screen.getByText('Testing Again')).toBeInTheDocument();
 });

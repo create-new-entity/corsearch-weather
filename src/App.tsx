@@ -1,5 +1,5 @@
 
-import styles from './App.module.scss'
+import styles from './App.module.scss';
 
 const App = () => {
   return (
@@ -7,4 +7,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;

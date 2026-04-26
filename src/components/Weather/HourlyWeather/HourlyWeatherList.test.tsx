@@ -1,8 +1,8 @@
 
 
 import { render, screen } from '@testing-library/react';
-import { HourlyWeatherList } from './HourlyWeatherList';
 import type { HourlyWeather } from '../../../features/weather/api';
+import HourlyWeatherList from './HourlyWeatherList';
 
 describe('HourlyWeatherList', () => {
   const hourly: HourlyWeather = {

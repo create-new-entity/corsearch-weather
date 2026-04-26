@@ -1,10 +1,9 @@
 
-
 import { useState } from 'react';
 import styles from './SearchBar.module.scss';
-
 import type { City } from '../../features/weather/api';
-import { Chip } from './Chip';
+import Chip from './Chip';
+
 
 type SearchBarProps = {
   city: City | null;
@@ -14,7 +13,7 @@ type SearchBarProps = {
   error: string;
 };
 
-export function SearchBar(props: SearchBarProps) {
+const SearchBar = (props: SearchBarProps) => {
   const { city, isLoading = false, onSearch, onRemove, error = '' } = props;
   const [query, setQuery] = useState('');
 
@@ -67,4 +66,6 @@ export function SearchBar(props: SearchBarProps) {
       }
     </form>
   );
-}
+};
+
+export default SearchBar;

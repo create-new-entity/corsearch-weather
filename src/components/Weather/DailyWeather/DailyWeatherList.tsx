@@ -9,7 +9,7 @@ type DailyWeatherListProps = {
   daily: DailyWeather;
 };
 
-export function DailyWeatherList({ daily }: DailyWeatherListProps) {
+const DailyWeatherList = ({ daily }: DailyWeatherListProps) => {
   const dailyItems: DailyWeatherItem[] = daily.time.map((time, index) => ({
     time,
     weatherCode: daily.weather_code[index],
@@ -32,4 +32,6 @@ export function DailyWeatherList({ daily }: DailyWeatherListProps) {
       </div>
     </section>
   );
-}
+};
+
+export default DailyWeatherList;

@@ -2,7 +2,7 @@
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { SearchBar } from './SearchBar';
+import SearchBar from './SearchBar';
 
 test('calls onSearch with trimmed query when submitted', async () => {
   const user = userEvent.setup();

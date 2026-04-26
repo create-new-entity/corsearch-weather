@@ -9,7 +9,7 @@ type HourlyWeatherListProps = {
     hourly: HourlyWeather;
 };
   
-export function HourlyWeatherList({ hourly }: HourlyWeatherListProps) {
+const HourlyWeatherList = ({ hourly }: HourlyWeatherListProps) => {
     const hourlyItems: HourlyWeatherItem[] = hourly.time.map((time, index) => ({
       time,
       weatherCode: hourly.weather_code[index],
@@ -34,3 +34,5 @@ export function HourlyWeatherList({ hourly }: HourlyWeatherListProps) {
         </div>
     </section>);
 };
+
+export default HourlyWeatherList;

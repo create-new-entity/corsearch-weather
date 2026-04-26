@@ -8,10 +8,12 @@ type PaperProps = {
   className?: string;
 };
 
-export const Paper = ({ children, className = '' }: PaperProps) => {
+const Paper = ({ children, className = '' }: PaperProps) => {
   return (
     <div className={`${styles.paper} ${className}`}>
       {children}
     </div>
   );
 };
+
+export default Paper;

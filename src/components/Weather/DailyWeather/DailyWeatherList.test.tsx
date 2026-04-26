@@ -2,7 +2,7 @@
 
 import { render, screen } from '@testing-library/react';
 import type { DailyWeather } from '../../../features/weather/api';
-import { DailyWeatherList } from './DailyWeatherList';
+import DailyWeatherList from './DailyWeatherList';
 
 describe('DailyWeatherList', () => {
   const daily: DailyWeather = {

@@ -1,7 +1,8 @@
 
 
 import { render, screen } from '@testing-library/react';
-import HourlyWeatherCard, { type HourlyWeatherItem } from './HourlyWeatherCard';
+import type { HourlyWeatherItem } from './HourlyWeatherCard';
+import HourlyWeatherCard from './HourlyWeatherCard';
 
 describe('HourlyWeatherCard', () => {
   const hour: HourlyWeatherItem = {

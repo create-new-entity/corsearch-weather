@@ -1,7 +1,7 @@
 
 import {
   SearchBar, CurrentWeather, Loader,
-  HourlyWeatherList, DailyWeatherList
+  HourlyWeatherList, DailyWeatherList, WelcomeBanner
 } from '../components';
 import { useGeocoding, useWeather } from '../features/weather/hooks';
 import styles from './App.module.scss';
@@ -29,6 +29,9 @@ const App = () => {
         />
       </section>
       <section className={styles.currentWeather}>
+        {
+          !city && !isWeatherLoading && <WelcomeBanner />
+        }
         {
           isCurrentWeatherAvailable &&
           <CurrentWeather current={weather.current} units={weather.current_units}/>

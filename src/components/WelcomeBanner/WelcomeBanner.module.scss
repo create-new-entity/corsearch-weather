@@ -1,0 +1,25 @@
+
+
+@use './../../styles/variables';
+
+.banner {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  margin: 0;
+  font-size: variables.$sub-header-font-size;
+  font-weight: variables.$sub-header-font-weight;
+}
+
+.message {
+  margin: 0;
+  color: variables.$text-secondary-color;
+}

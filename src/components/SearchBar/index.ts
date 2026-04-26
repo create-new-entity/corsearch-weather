@@ -1,3 +1,3 @@
 
-export { Chip } from './Chip';
-export { SearchBar } from './SearchBar';
+export { default as Chip } from './Chip';
+export { default as SearchBar } from './SearchBar';

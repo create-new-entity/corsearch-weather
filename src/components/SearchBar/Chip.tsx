@@ -7,7 +7,7 @@ type ChipProps = {
     onRemove: () => void;
 };
 
-export const Chip = ({ city, country, onRemove }: ChipProps) => {
+const Chip = ({ city, country, onRemove }: ChipProps) => {
     return (
         <div className={styles.chip}>
             <span className={styles.chipLabel}>
@@ -25,3 +25,5 @@ export const Chip = ({ city, country, onRemove }: ChipProps) => {
         </div>
     );
 };
+
+export default Chip;

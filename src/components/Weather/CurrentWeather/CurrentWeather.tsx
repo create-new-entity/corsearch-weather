@@ -12,7 +12,7 @@ type CurrentWeatherProps = {
   units: Record<string, string>;
 };
 
-export const CurrentWeather = ({ current, units }: CurrentWeatherProps) => {
+const CurrentWeather = ({ current, units }: CurrentWeatherProps) => {
   const dayLabel = current.is_day === 1 ? 'Day' : 'Night';
 
   const { day, date, time } = getReadableDate(current.time);
@@ -48,3 +48,5 @@ export const CurrentWeather = ({ current, units }: CurrentWeatherProps) => {
     </Paper>
   );
 };
+
+export default CurrentWeather;

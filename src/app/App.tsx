@@ -1,6 +1,7 @@
 
 import {
-  SearchBar, CurrentWeather, Loader, HourlyWeatherList
+  SearchBar, CurrentWeather, Loader,
+  HourlyWeatherList, DailyWeatherList
 } from '../components';
 import { useGeocoding, useWeather } from '../features/weather/hooks';
 import styles from './App.module.scss';
@@ -41,6 +42,12 @@ const App = () => {
         {
           isCurrentWeatherAvailable &&
           <HourlyWeatherList hourly={weather.hourly} />
+        }
+      </section>
+      <section className={styles.dailyWeather}>
+        {
+          isCurrentWeatherAvailable &&
+          <DailyWeatherList daily={weather.daily} />
         }
       </section>
     </main>

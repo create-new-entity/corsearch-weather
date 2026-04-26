@@ -1,4 +1,3 @@
-@use './../../../styles/variables';
 @use './../../../styles/mixins';
 
 .card {
@@ -15,9 +14,4 @@
 
 .temp {
   @include mixins.temperature-text;
-}
-
-.time {
-  font-size: variables.$small-header;
-  font-weight: variables.$sub-header-font-weight;
 }

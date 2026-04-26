@@ -19,6 +19,12 @@ type HourlyWeatherCardProps = {
   hour: HourlyWeatherItem;
 };
 
+
+/*
+  HourlyWeatherCard renders details of an hour of the weather.
+  It is used to show details of different forecasted hours, for example:
+  Next 12 hours of the same day. Each card shows 1 hour's details.
+*/
 const HourlyWeatherCard = ({ hour }: HourlyWeatherCardProps) => {
   const { time } = getReadableDate(hour.time);
   const weather = getWeatherMeta(hour.weatherCode, hour.isDay);

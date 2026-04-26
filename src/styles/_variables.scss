@@ -1,16 +1,23 @@
 
-
 $page-layout-columns: 12;
 $sub-header-font-weight: 600;
 
-
-$primary-color: #438f46;
+$primary-color: #2f7d32;
 $white-color: #ffffff;
+$red-color: #b42318;
 
-$button-font-color: $primary-color;
+$text-primary-color: #101828;
+$text-secondary-color: #667085;
+
+$button-background-color: $primary-color;
+$button-font-color: $white-color;
+
 $chip-background-color: $white-color;
 $chip-font-color: $primary-color;
 
-$error-color: #b42318;
-$app-font-color: #ffffff;
-$app-background-color: $primary-color;
+$paper-font-color: $text-primary-color;
+$paper-background-color: $white-color;
+
+$app-font-color: $text-primary-color;
+
+$error-color: $red-color;

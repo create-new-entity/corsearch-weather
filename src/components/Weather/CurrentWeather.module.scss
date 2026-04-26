@@ -1,0 +1,45 @@
+
+.currentWeather {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+
+  background: linear-gradient( 135deg, #dfe3e4, #d9ecff );
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.paperOverRide {
+  padding: 0rem;
+}
+
+.weatherIconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weatherIcon {
+  font-size: 5rem;
+}
+
+.temperature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.temperatureValue {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.temperatureUnit {
+  font-size: 1.25rem;
+  font-weight: 600;
+}

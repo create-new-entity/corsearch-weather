@@ -1,10 +1,13 @@
 
-import { SearchBar } from '../components/SearchBar/SearchBar';
-import { useGeocoding } from '../features/weather/hooks';
+import { SearchBar, CurrentWeather, Loader } from '../components';
+import { useGeocoding, useWeather } from '../features/weather/hooks';
 import styles from './App.module.scss';
 
 const App = () => {
   const { city, isLoading, error, searchCity, clearCity } = useGeocoding();
+
+  const { weather, isLoading: isWeatherLoading } = useWeather(city);
+  const isCurrentWeatherAvailable = weather && weather.current && weather.current_units;
 
   return (
     <main className={styles.page}>
@@ -13,7 +16,7 @@ const App = () => {
           Weather lookup
         </h1>
       </header>
-      <section className={styles.searchContainer}>
+      <section className={`${styles.searchContainer} fade-in-up`}>
         <SearchBar
           city={city}
           isLoading={isLoading}
@@ -21,6 +24,16 @@ const App = () => {
           onRemove={clearCity}
           error={error || ''}
         />
+      </section>
+      <section className={styles.currentWeather}>
+        {
+          isCurrentWeatherAvailable &&
+          <CurrentWeather current={weather.current} units={weather.current_units}/>
+        }
+        {
+          isWeatherLoading &&
+          <Loader/>
+        }
       </section>
     </main>
   );

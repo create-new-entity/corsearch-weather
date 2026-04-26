@@ -21,8 +21,6 @@
   border: 1px solid #d0d5dd;
   border-radius: 0.75rem;
   font: inherit;
-
-  color: variables.$button-font-color
 }
 
 .button {
@@ -32,7 +30,8 @@
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-  color: variables.$button-font-color
+  color: variables.$button-font-color;
+  background-color: variables.$button-background-color;
 }
 
 .button:disabled,

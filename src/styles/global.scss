@@ -1,0 +1,22 @@
+
+@use './../styles/variables';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: variables.$app-background-color;
+}
+
+body {
+  color: variables.$app-font-color;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}

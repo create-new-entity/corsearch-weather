@@ -1,0 +1,29 @@
+
+@use './../styles/variables';
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(variables.$page-layout-columns, 1fr);
+  grid-template-rows: auto auto 1fr;
+  grid-auto-rows: minmax(0, auto);
+  grid-template-areas:
+    'header header header . . . . . . . . .'
+    '. . . . . . . searchContainer searchContainer searchContainer searchContainer searchContainer'
+    '. . . . . . . . . . . .';
+
+}
+
+.header {
+  grid-area: header;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.searchContainer {
+  grid-area: searchContainer;
+  margin-right: 0.5rem;
+}

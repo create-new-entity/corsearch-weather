@@ -1,10 +1,15 @@
 
 $page-layout-columns: 12;
+
+$sub-header-font-size: 1.5rem;
 $sub-header-font-weight: 600;
+$small-header: 0.9rem;
 
 $primary-color: #2f7d32;
 $white-color: #ffffff;
 $red-color: #b42318;
+$gradient-surface: linear-gradient(135deg, #dfe3e4, #d9ecff);
+$shadow-soft: 0 0.5rem 1.5rem rgba(16, 24, 40, 0.08);
 
 $text-primary-color: #101828;
 $text-secondary-color: #667085;

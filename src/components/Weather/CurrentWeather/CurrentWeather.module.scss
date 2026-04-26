@@ -1,4 +1,6 @@
 
+@use './../../../styles/variables';
+
 .currentWeather {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
   align-items: center;
   gap: 0.5rem;
 
-  background: linear-gradient( 135deg, #dfe3e4, #d9ecff );
+  background: variables.$gradient-surface;
   padding: 1rem;
   border-radius: 1rem;
 }

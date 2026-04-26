@@ -1,11 +1,11 @@
 
 
-import { Paper } from './../Paper';
+import { Paper } from '../../Paper';
 import type {
     CurrentWeather as CurrentWeatherData
-} from './../../features/weather/api';
+} from '../../../features/weather/api';
 import styles from './CurrentWeather.module.scss';
-import { getReadableDate, getWeatherMeta } from '../../util';
+import { getReadableDate, getWeatherMeta } from '../../../util';
 
 type CurrentWeatherProps = {
   current: CurrentWeatherData;
@@ -14,9 +14,6 @@ type CurrentWeatherProps = {
 
 export const CurrentWeather = ({ current, units }: CurrentWeatherProps) => {
   const dayLabel = current.is_day === 1 ? 'Day' : 'Night';
-
-  console.log('current', current);
-  console.log('units', units);
 
   const { day, date, time } = getReadableDate(current.time);
   const { label, icon } = getWeatherMeta(current.weather_code, current.is_day);

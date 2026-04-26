@@ -1,3 +1,3 @@
 
-
-export { CurrentWeather } from './CurrentWeather';
+export * from './CurrentWeather';
+export * from './HourlyWeather';

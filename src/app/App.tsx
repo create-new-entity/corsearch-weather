@@ -1,5 +1,7 @@
 
-import { SearchBar, CurrentWeather, Loader } from '../components';
+import {
+  SearchBar, CurrentWeather, Loader, HourlyWeatherList
+} from '../components';
 import { useGeocoding, useWeather } from '../features/weather/hooks';
 import styles from './App.module.scss';
 
@@ -13,7 +15,7 @@ const App = () => {
     <main className={styles.page}>
       <header className={styles.header}>
         <h1 className={styles.title}>
-          Weather lookup
+          Weather App
         </h1>
       </header>
       <section className={`${styles.searchContainer} fade-in-up`}>
@@ -33,6 +35,12 @@ const App = () => {
         {
           isWeatherLoading &&
           <Loader/>
+        }
+      </section>
+      <section className={styles.hourlyWeather}>
+        {
+          isCurrentWeatherAvailable &&
+          <HourlyWeatherList hourly={weather.hourly} />
         }
       </section>
     </main>

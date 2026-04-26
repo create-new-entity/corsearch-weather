@@ -6,7 +6,7 @@ const FORECAST_API_URL = 'https://api.open-meteo.com/v1/forecast';
 /*
     Example usage:
 
-    https://api.open-meteo.com/v1/forecast?latitude=60.1695&longitude=24.9354&daily=sunrise,sunset,weather_code,temperature_2m_max,temperature_2m_min,daylight_duration,sunshine_duration&hourly=temperature_2m,rain,snowfall,apparent_temperature,weather_code&current=temperature_2m,is_day,weather_code,rain,snowfall,apparent_temperature&timezone=auto&past_days=7&forecast_days=7&forecast_hours=12
+    https://api.open-meteo.com/v1/forecast?latitude=60.1695&longitude=24.9354&daily=sunrise,sunset,weather_code,temperature_2m_max,temperature_2m_min,daylight_duration,sunshine_duration&hourly=temperature_2m,rain,snowfall,apparent_temperature,weather_code,is_day&current=temperature_2m,is_day,weather_code,rain,snowfall,apparent_temperature&timezone=auto&past_days=7&forecast_days=7&forecast_hours=12
 */
 
 export type CurrentWeather = {
@@ -27,6 +27,7 @@ export type HourlyWeather = {
   rain: number[];
   snowfall: number[];
   apparent_temperature: number[];
+  is_day: number[];
 };
 
 export type DailyWeather = {
@@ -67,10 +68,10 @@ export async function fetchWeather(
     'daily',
     'sunrise,sunset,weather_code,temperature_2m_max,temperature_2m_min,daylight_duration,sunshine_duration'
   );
-
+  
   url.searchParams.set(
     'hourly',
-    'temperature_2m,rain,snowfall,apparent_temperature,weather_code'
+    'temperature_2m,rain,snowfall,apparent_temperature,weather_code,is_day'
   );
 
   url.searchParams.set(

@@ -2,8 +2,8 @@
 
 // CurrentWeather.test.tsx
 import { render, screen } from '@testing-library/react';
-import { CurrentWeather } from './CurrentWeather';
-import type { CurrentWeather as CurrentWeatherData } from '../../features/weather/api';
+import { CurrentWeather } from '.';
+import type { CurrentWeather as CurrentWeatherData } from '../../../features/weather/api';
 
 const current: CurrentWeatherData = {
   time: '2026-04-26T19:45',

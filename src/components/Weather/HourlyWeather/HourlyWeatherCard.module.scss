@@ -1,0 +1,36 @@
+
+@use './../../../styles/variables';
+
+
+.card {
+  padding: 1rem;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  min-width: 12rem;
+  background: variables.$gradient-surface;
+  box-shadow: variables.$shadow-soft;
+}
+  
+.time {
+  font-size: variables.$small-header;
+  font-weight: variables.$sub-header-font-weight;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.temp {
+  font-size: 1.2rem;
+  font-weight: variables.$sub-header-font-weight;
+}

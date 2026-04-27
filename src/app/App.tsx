@@ -16,9 +16,11 @@ const App = () => {
   return (
     <main className={styles.page}>
       <header className={styles.header}>
-        <h1 className={styles.title}>
-          Weather App
-        </h1>
+        <Paper>
+          <h1 className={styles.title}>
+            Weather App
+          </h1>
+        </Paper>
       </header>
       <section className={`${styles.search} fade-in-up`}>
         <Paper className={styles.paperOverride}>

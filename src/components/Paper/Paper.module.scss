@@ -4,7 +4,7 @@
 .paper {
     width: 100%;
 
-    background-color: variables.$paper-background-color;
+    background: variables.$gradient-surface;
     color: variables.$paper-font-color;
     border-radius: 1rem;
     padding: 1rem;

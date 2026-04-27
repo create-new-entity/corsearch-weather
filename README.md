@@ -3,7 +3,7 @@
 
 ## How to run locally?
 - Run this command at root folder: ```npm run install```
-- To run locally on my mac, I also had to do: ```nvm install 22.12.0``` adn ```nvm use 22.12.0```
+- To run locally on my mac, I also had to do: ```nvm install 22.12.0``` and ```nvm use 22.12.0```
 - Then run: ```npm run dev```
 - Go to: ```http://localhost:5173/``` on browser
 

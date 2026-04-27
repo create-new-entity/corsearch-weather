@@ -4,6 +4,9 @@
 .searchBar {
   display: grid;
   gap: 0.5rem;
+  background: variables.$gradient-surface;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .label {

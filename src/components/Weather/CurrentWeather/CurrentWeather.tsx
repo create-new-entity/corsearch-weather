@@ -20,7 +20,7 @@ const CurrentWeather = ({ current, units }: CurrentWeatherProps) => {
 
   return (
     <Paper className={`${styles.paperOverRide} fade-in-up`}>
-      <section className={styles.currentWeather}>
+      <section className={styles.current}>
         <h3>Current Weather</h3>
         <div className={styles.weatherIconContainer}>
             <div className={styles.weatherIcon}>

@@ -24,12 +24,12 @@ const DailyWeatherList = ({ daily }: DailyWeatherListProps) => {
   return (
     <section className={`${styles.container} fade-in-up`}>
       <h2 className={styles.title}>Daily forecast</h2>
-
       <div className={styles.list}>
         {dailyItems.map((day) => (
           <DailyWeatherCard key={day.time} day={day} />
         ))}
       </div>
+      <p className={styles.scrollHint}>Scroll horizontally to see more</p>
     </section>
   );
 };

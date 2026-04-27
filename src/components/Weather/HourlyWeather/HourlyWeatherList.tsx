@@ -32,6 +32,7 @@ const HourlyWeatherList = ({ hourly }: HourlyWeatherListProps) => {
             })
           }
         </div>
+        <p className={styles.scrollHint}>Scroll horizontally to see more</p>
     </section>);
 };
 
